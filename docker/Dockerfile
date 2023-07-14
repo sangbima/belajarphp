@@ -6,4 +6,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip
 
+COPY ./php/webdev.ini /usr/local/etc/php/conf.d
+COPY ./php/webdev.pool.conf /usr/local/etc/php-fpm.d/
+
 WORKDIR /var/www
