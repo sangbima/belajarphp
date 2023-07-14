@@ -1,6 +1,7 @@
 <?php
-phpinfo();
 
-echo '<pre>';
-print_r($_SERVER);
-echo '</pre>';
+require __DIR__ . '/../vendor/autoload.php';
+
+$id = new \Ramsey\Uuid\UuidFactory();
+
+echo $id->uuid4();
